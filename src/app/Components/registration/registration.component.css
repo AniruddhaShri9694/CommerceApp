@@ -1,0 +1,54 @@
+#radiodiv input  
+{
+    margin-left: 2%;
+}
+
+#radiodiv label  
+{
+    margin-left: 2%;
+}
+label{
+    color: antiquewhite;
+}
+
+#btndiv{
+    text-align: -webkit-center;
+}
+
+.justify1
+{
+    text-align: -webkit-center;
+}
+
+h5{
+    text-align: center;
+    color:red;
+}
+
+h4{
+    text-align: center;
+    color: antiquewhite;
+    padding-top: 25px;
+}
+
+a{
+    left: 95%;
+    position: relative;
+}
+.regcontainer{
+    background-image: URl('assets/img/hotel2.jpg');
+    width: 100%;
+    position: absolute;
+    background-repeat: round;
+    /* margin: 5px;
+    height: 98%; */
+    height :100%;
+}
+.validationSpan{
+    width: 100%;
+    
+    margin-top: -20px;
+    background-color: red;
+    color: black;
+    margin-bottom: 3px;
+}

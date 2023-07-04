@@ -1,0 +1,306 @@
+
+.row1{
+    display: flex;
+    flex-direction: row;
+    padding:5px;
+}
+
+.noborderradius{
+    border-radius: 0px !important;
+}
+
+.noborder{
+    border: 0px !important;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.backclr
+{
+    background: rgb(244,244,245);    
+}
+
+.zeropad{
+    padding:0px 20px 0px 20px !important;
+}
+
+.MainDiv{
+    background: rgb(242,242,244);
+}
+
+.ParentDiv
+{
+    border: 1px solid #BF3081;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 5px;
+    margin-top:25px !important;
+}
+
+#tabGroup{
+    top: 23px;
+    position: relative;
+}
+
+.header1{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.Parent1{
+    display: flex;
+    padding: 13px;
+    background: white;
+    justify-content: center;
+    border-radius: 4px;
+    top: 17px;
+    position: relative;
+}
+
+.margintop{
+    margin-top: 28px;
+}
+input {
+    width: 100%;
+    border: 0;
+    padding: 0px;
+    height: 20px;
+}
+  
+.inputlabel{
+    font-size: 12px;
+    position: relative;
+    padding:0px;
+}
+  /* mat-tab{
+      font-weight: bold;
+      background: #BF3081;
+  }
+
+mat-tab-labels{
+    background:#BF3081 !important;
+} */
+
+.floatright
+{
+    float: right;
+}
+
+.NotesDiv
+{
+    border: 6px solid #BF3081;
+    background: white;
+}
+#Notesbtn{
+    background-color: #BF3081;
+    color: white;
+    font-size: 10px;
+    padding: 0px 4px 0px 4px;
+    cursor: pointer;
+}
+
+#Decisionnotebtn{
+    background-color: #BF3081;
+    color: white;
+    font-size: 13px;
+    padding: 0px 8px 0px 8px;
+    cursor: pointer;
+}
+
+
+#cancelbtn{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+    background: white;
+    color: black;
+    border: 1px solid #BF3081;
+    font-size: 12px;
+}
+
+#savebtn{
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 10px;
+    background: #BF3081;
+    color: white;
+    border: 1px solid #BF3081;
+    font-size: 12px;
+}
+
+.justifycenter
+{
+    display: flex;
+    justify-content: center;
+}
+
+.DecisionDescription{
+    height: 60px;
+    border: 1px solid grey;
+}
+
+.DecisionDeclineDes{
+    border: 1px solid gray;
+    height: 30px;
+}
+
+.Comment{
+    width: 300px;
+    height: 240px;
+    border: 1px solid grey;
+}
+
+.CAMComment{
+    height: 80px;
+    border: 1px solid grey;
+}
+
+#DecReason{
+    width: 100%;
+}
+.notediv{
+    z-index: 5;
+    position: absolute;
+    right: 0;
+}
+    button{
+        background-color: #BF3081;
+        color:white;
+    }
+
+    #matgrp2 ::ng-deep .mat-tab-list .mat-tab-labels  
+    {
+    background-color: #BF3081;
+    color:white;
+    }
+
+    #matgrp3 ::ng-deep .mat-tab-list .mat-tab-labels  
+    {
+    background-color: #BF3081;
+    color:white;
+    }
+
+    ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label  
+    {
+    opacity: 1;
+    }
+
+    #matgrp2 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label .mat-tab-label-content  
+    {
+    color:white;
+    font-size: 14px !important;
+    }
+
+    #matgrp3 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label .mat-tab-label-content  
+    {
+    color:white;
+    font-size: 14px !important;
+    }
+
+    #matgrp4 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label .mat-tab-label-content  
+    {
+    font-size: 13px !important;
+    }
+
+     ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label
+     {
+        min-width:80px !important;
+        padding:0px 15px !important
+     }
+
+    #matgrp2 ::ng-deep .mat-tab-group .mat-tab-body-wrapper
+    {
+    border: 1px solid #BF3081;
+    }
+
+    #matgrp3 ::ng-deep .mat-tab-group .mat-tab-body-wrapper
+    {
+    border: 0
+    }
+
+    ::ng-deep .mat-tab-label-content
+    {
+        font-weight: 500 !important;
+    }
+
+    ::ng-deep .mat-tab-header{
+        border: 0px;
+        }
+
+    #matgrp2 ::ng-deep .mat-ink-bar {
+    background-color: var(--primary-color,white) !important;
+    margin: 3px;
+    }
+
+    #matgrp3 ::ng-deep .mat-ink-bar {
+        background-color: var(--primary-color,white) !important;
+        margin: 3px;
+        }
+
+    
+    .maininputs{
+        border-bottom: 1px solid gray;
+        width: 85%;
+    }
+
+    #ExternalText{
+        color: #BF3081;
+        font-weight: bold;
+    }
+
+    .externalverdiv{
+        border-radius: 8px 8px 0px 0px;
+        padding: 5px;
+        background: rgb(244,244,245);
+        border-color: #BF3081;
+        border-style: solid;
+        border-top-width: 1px;
+        border-left-width: 1px;
+        border-right-width: 1px;
+    }
+
+    textarea{
+        height: 273px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 273px;
+    }
+    .alignitemcenter{
+        display: flex;
+        align-items: center;
+    }
+
+
+    ::ng-deep mat-form-field .mat-form-field-wrapper{
+        margin: 0px;
+        
+        font-size: 12px;
+        }
+
+        .fnt12{
+            font-size: 12px;
+        }
+
+        .fntwt14{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 992px) {
+  
+            .row1{
+                display: flex;
+                flex-direction: column;
+                padding:5px;
+            }    
+        
+            .col-md-3
+            {
+                max-width: 100%;
+            }
+            
+            .inputlabel{
+                max-width:100%;
+            }
+          }

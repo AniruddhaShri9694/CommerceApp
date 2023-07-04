@@ -1,0 +1,27 @@
+#Sidebar
+{
+    display: flex;
+    align-items: stretch;
+    background-color: #1267c7 !important;
+    height: 100%;
+    width: 80px;
+}
+
+#container
+{
+    display: flex;
+    align-items: stretch;
+    background-color: #abc5e4 !important;
+    height: 100%;
+}
+
+.nav{
+    margin: 25px;
+}
+.nav:hover{
+    cursor: pointer;
+}
+
+img{
+    height:30px
+}

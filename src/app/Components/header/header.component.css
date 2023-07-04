@@ -1,0 +1,37 @@
+#Menubar
+{
+    display: flex;
+    align-items: center;
+    background-color: #1267c7 !important;
+    height: 100%;
+    width: 100%;
+    float:right;
+}
+
+ul{
+    flex-direction: row;
+}
+li{
+    display: flex;
+    align-self: center;
+    padding-left: 15px;
+}
+#container
+{
+    display: flex;
+    align-items: stretch;
+    background-color: #abc5e4 !important;
+    height: 100%;
+}
+
+.nav{
+    margin: 8px;
+    position: relative;
+}
+.nav:hover{
+    cursor: pointer;
+}
+
+img{
+    height:23px
+}

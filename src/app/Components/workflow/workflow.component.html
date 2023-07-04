@@ -1,0 +1,43 @@
+<div class="mt-3 ml-3 mr-3" id="matgrp3">
+  <mat-tab-group (selectedTabChange)="this.sharedService.tabChanged($event)">
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[7]?.value}}>
+      <div class="SpacerDiv noborderradius"></div>
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[8]?.value}}>
+      <div class="SpacerDiv noborderradius"></div>
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[9]?.value}}>
+      <div class="SpacerDiv noborderradius"></div>
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[10]?.value}}>
+      <div class="SpacerDiv noborderradius">
+        <div class="ml-3">
+            <div class="fntwt14">{{this.sharedService.headerdata[0]?.jsonData[10]?.data.label1}}</div>
+        </div>
+        <div class="ml-3 mt-3">
+          <div>
+            <mat-checkbox class="fnt12">{{this.sharedService.headerdata[0]?.jsonData[10]?.data.label2}}</mat-checkbox>
+          </div>
+          <div>
+            <mat-checkbox class="fnt12">{{this.sharedService.headerdata[0]?.jsonData[10]?.data.label3}}</mat-checkbox>
+          </div>
+          <div>
+            <mat-checkbox class="fnt12">{{this.sharedService.headerdata[0]?.jsonData[10]?.data.label4}}</mat-checkbox>
+          </div>
+          <div>
+            <mat-checkbox class="fnt12">{{this.sharedService.headerdata[0]?.jsonData[10]?.data.label5}}</mat-checkbox>
+          </div>
+          <div>
+            <mat-checkbox class="fnt12">{{this.sharedService.headerdata[0]?.jsonData[10]?.data.label6}}</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 floatright">
+        <button id="invokebtn" mat-flat-button color="#BF3081">{{this.sharedService.headerdata[0]?.jsonData[10]?.data.buttonLabel}}</button>
+      </div>
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[11]?.value}}>
+      <div class="SpacerDiv noborderradius"></div>
+    </mat-tab>
+  </mat-tab-group>      
+</div>

@@ -1,0 +1,574 @@
+
+<div class="mt-3 ml-3 mr-3 ParentDiv externalverdiv backclr">
+  <div class="row1">
+      <span id="ExternalText">{{this.sharedService.headerdata[0]?.jsonData[4]?.data.label7}}</span>
+  </div>
+</div>
+<div class="mr-3 ml-3" id="matgrp2">
+  <mat-tab-group id="externalMatGrp" (selectedTabChange)="this.sharedService.tabChanged($event)">
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[12]?.value}}> 
+      <div>
+        <div class="row1 col-md-12 mt-2 mb-2"> 
+          <div class="col-md-2 alignitemcenter p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label1}}</span>
+          </div>
+          <div class="col-md-3 p-0">
+            <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2 alignitemcenter p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label2}}</span>
+          </div>
+          <div class="col-md-3 p-0">
+            <input matInput class="decisionInput" disabled value="">
+          </div>
+        </div>
+        <div class="row1 col-md-12 mt-2 mb-2"> 
+          <div class="col-md-2 alignitemcenter p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label3}}</span>
+          </div>
+          <div class="col-md-3 p-0">
+            <input matInput class="decisionInput" disabled value="">
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2 alignitemcenter p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label4}}</span>
+          </div>
+          <div class="col-md-3 p-0">
+            <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          </div>
+        </div>
+        <div class="row1 col-md-12 mt-2 mb-2"> 
+          <div class="col-md-2 alignitemcenter mb-2 p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label5}}</span>
+          </div>
+          <div class="col-md-3 mb-3 p-0">
+            <textarea matInput class="decisionInput ExtTextarea" disabled value=""></textarea>  
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2 alignitemcenter p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label6}}</span>
+          </div>
+          <div class="col-md-3 p-0">
+            <mat-form-field>
+            <mat-select name="user_data" [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          </div>
+        </div>
+        <div class="row1 col-md-12 mt-2 mb-2"> 
+          <div class="col-md-2 alignitemcenter p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label7}}</span>
+          </div>
+          <div class="col-md-3 p-0">
+            <mat-form-field>
+              <mat-select name="user_data" [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2 alignitemcenter p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label8}}</span>
+          </div>
+          <div class="col-md-3 p-0">
+            <input matInput class="decisionInput" disabled value="">
+          </div>
+        </div>     
+        <div class="row1 col-md-12 mt-2 mb-2"> 
+          <div class="col-md-2 alignitemcenter p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[12]?.data.label9}}</span>
+          </div>
+          <div class="col-md-3 p-0">
+            <mat-form-field>
+              <mat-select name="user_data" [(ngModel)]="user_data" >
+                <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+              </mat-select>
+          </mat-form-field>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+    </div>
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[13]?.value}}>
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label1}}</span></div>
+        <div class="col-md-3 p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-7"></div>
+      </div>
+
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label2}}</span></div>
+        <div class="col-md-3 p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label3}}</span></div>
+        <div class="col-md-3 p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label4}}</span></div>
+        <div class="col-md-3 p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label5}}</span></div>
+        <div class="col-md-3 p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label6}}</span></div>
+        <div class="col-md-3 p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label7}}</span></div>
+        <div class="col-md-3 p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row1 col-md-12 mt-2 mb-2">
+          <div class="col-md-2 alignitemcenter mb-2 p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label8}}</span>
+          </div>
+          <div class="col-md-3 alignitemcenter mb-3 p-0">
+            <textarea matInput class="decisionInput ExtTextarea" disabled value=""></textarea>  
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-2 alignitemcenter mb-2 p-0">
+            <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label9}}</span>
+          </div>
+          <div class="col-md-3 alignitemcenter mb-3 p-0">
+            <textarea matInput class="decisionInput ExtTextarea" disabled value=""></textarea>  
+          </div>
+      </div>
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label10}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker1">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label101}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker2">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label102}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <input matInput class="decisionInput" disabled value=""/>  
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label103}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <input matInput class="decisionInput" disabled value=""/>  
+        </div>
+      </div>
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label104}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label105}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label106}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label107}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label108}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0">
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label109}}</span>
+        </div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter mb-2 p-0">  
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[13]?.data.label110}}</span>
+        </div>
+        <div class="col-md-5 alignitemcenter mb-3 p-0">  
+          <textarea matInput class="decisionInput remarkTextarea" disabled value=""></textarea>  
+        </div>
+        <div class="col-md-4"></div>  
+      </div>
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[14]?.value}}> Content 3 </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[15]?.value}}>
+      <div class="row1 mt-2 mb-2"> 
+        <div class="col-md-6 p-0">
+          <div class="row1"> 
+            <div class="col-md-3 alignitemcenter inputlabel">{{this.sharedService.headerdata[0]?.jsonData[15]?.data.label1}}</div>
+            
+            <div class="col-md-3 inputlabel alignitemcenter">                
+              <mat-form-field>
+                <mat-select name="user_data"  [(ngModel)]="user_data" >
+                  <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row1"> 
+            <div class="col-md-3 alignitemcenter inputlabel">{{this.sharedService.headerdata[0]?.jsonData[15]?.data.label2}}</div>
+            
+            <div class="col-md-3 inputlabel alignitemcenter ">                
+              <mat-form-field>
+                <mat-select name="user_data"  [(ngModel)]="user_data" >
+                  <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row1"> 
+            <div class="col-md-3 alignitemcenter inputlabel">{{this.sharedService.headerdata[0]?.jsonData[15]?.data.label3}}</div>
+            
+            <div class="col-md-3 inputlabel">                
+              <mat-form-field>
+                <mat-select name="user_data"  [(ngModel)]="user_data" >
+                  <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row1"> 
+            <div class="col-md-3 alignitemcenter inputlabel">{{this.sharedService.headerdata[0]?.jsonData[15]?.data.label4}}</div>
+            
+            <div class="col-md-3 inputlabel">                
+              <mat-form-field>
+                <mat-select name="user_data"  [(ngModel)]="user_data" >
+                  <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-2 mb-2 row1">
+            <div class="col-md-3 mb-2 inputlabel alignitemcenter">{{this.sharedService.headerdata[0]?.jsonData[15]?.data.label5}}</div>
+            <div class="col-md-3 mb-3 p-0">
+              <textarea readonly class="Comment" type="text"></textarea>
+            </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[16]?.value}}>
+
+      <div class="row mb-2" *ngFor="let data1 of VALUATIONCHECKDATA[0].valuations;index as i"  style="margin-right: 0px;">
+        <mat-checkbox id="checkbox{{i}}" class="fnt12 mr-2 mt-3"></mat-checkbox>
+             <mat-accordion style="width:98%">
+                  <mat-expansion-panel class="" (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <div class="row col-md-12">
+                    <div class="col-md-2"> Valuation {{i+1}}</div>
+                    <div class="col-md-6"></div>
+                    <div class="col-md-2">Total Valuation</div>
+                    <div class="col-md-2"><input matInput id="totalvaluation{{i}}" disabled style="color: white !important" value="{{this.data1.totalValuation}}"></div>
+                  </div>
+                  </mat-expansion-panel-header>                 
+                 
+                  <div class="row2 col-md-12  mt-2 p-0 border border-dark"  style="background: #BF3081 !important;color:white;font-weight:500px">
+                    <div class="col-md-2 alignitemcenter" style="border-right: 1px solid white; justify-content: center;">
+                      Ornament Type
+                    </div>
+                    <div class="col-md-1 alignitemcenter" style="border-right: 1px solid white; justify-content: center;">
+                      No of items
+                    </div>
+                    <div class="col-md-1 alignitemcenter" style="border-right: 1px solid white; justify-content: center;">
+                      Gross Weight in gms
+                    </div>
+                    <div class="col-md-1 alignitemcenter" style="border-right: 1px solid white; justify-content: center;">
+                      Deduction in gms
+                    </div>
+                    <div class="col-md-1 alignitemcenter" style="border-right: 1px solid white; justify-content: center;">
+                      Net Weight in gms
+                    </div>
+                    <div class="col-md-1 alignitemcenter" style="border-right: 1px solid white; justify-content: center;">
+                      Carat
+                    </div>
+                    <div class="col-md-2 alignitemcenter" style="border-right: 1px solid white; justify-content: center;">
+                      Rate per gram
+                    </div>
+                    <div class="col-md-3 alignitemcenter" style="justify-content: center;">
+                      Valuation
+                    </div>
+                  </div>
+                <div class="row2 col-md-12 border border-dark" style="border-top: 0px !important;" *ngFor="let d of data1.collaterals; index as j">
+                  <div class="col-md-2" style="text-align: center;">
+                    {{data1.collaterals[j].item}}
+                  </div>
+                  <div class="col-md-1" style="text-align: center;">
+                    <!-- <input type="number" min="0" matInput id="fld{{i}}1{{j}}" style="border:1px solid grey !important" value=""> -->
+                    {{data1.collaterals[j].noOfItems}}
+                  </div>
+                  <div class="col-md-1" style="text-align: center;">
+                    <!-- <input type="number" min="0" matInput id="fld{{i}}2{{j}}" (change)="calnetwt(i,j)" style="border:1px solid grey !important" value=""> -->
+                    {{data1.collaterals[j].grossWt}}
+                  </div>
+                  <div class="col-md-1" style="text-align: center;">
+                    <!-- <input type="number" min="0" matInput id="fld{{i}}3{{j}}" (change)="calnetwt(i,j)" style="border:1px solid grey !important" value=""> -->
+                    {{data1.collaterals[j].deductions}}
+                  </div>
+                  <div class="col-md-1" style="text-align: center;">
+                    <!-- <input type="number" min="0" matInput id="fld{{i}}4{{j}}"  disabled style="border:1px solid grey !important" value=""> -->
+                    {{data1.collaterals[j].netWt}}
+                  </div>
+                  <div class="col-md-1" style="text-align: center;">
+                    <!-- <input type="number" min="0" matInput id="fld{{i}}5{{j}}" style="border:1px solid grey !important" value=""> -->
+                    {{data1.collaterals[j].carat}}
+                  </div>
+                  <div class="col-md-2" style="text-align: center;">
+                    <!-- <input type="number" min="0" matInput id="fld{{i}}6{{j}}" disabled style="border:1px solid grey !important" value="{{data1.collaterals[j].rpg}}"> -->
+                    {{data1.collaterals[j].rpg}}
+                  </div>
+                  <div class="col-md-3" style="text-align: center;">
+                    <!-- <input type="number" min="0" matInput id="fld{{i}}7{{j}}" style="border:1px solid grey !important" disabled value="{{data1.collaterals[j].valuation}}"> -->
+                    {{data1.collaterals[j].valuation}}
+                  </div>
+                </div>
+                 
+        </mat-expansion-panel>
+   </mat-accordion>
+      </div>
+
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[17]?.value}}>
+      <div class="row1 col-md-12 mt-2">
+        <h6><span><u>{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label1}}</u></span></h6>
+      </div>
+      <div class="row1 col-md-12">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label2}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-7"></div>
+      </div>
+      <div class="row1 col-md-12">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label3}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+            <input matInput class="decisionInput" disabled value="">
+        </div>
+        <div class="col-md-7"></div>
+      </div>
+      <div class="row1 col-md-12 mt-3">
+        <h6><span><u>{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label4}}</u></span></h6>
+      </div>
+      <div class="row1 col-md-12">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label5}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-7"></div>
+      </div>
+      <div class="row1 col-md-12">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label6}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker3">
+            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+            <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label7}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker4">
+            <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+            <mat-datepicker #picker4></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row1 col-md-12">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label8}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label9}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <input matInput class="decisionInput" disabled value="">
+        </div>
+      </div>
+      <div class="row1 col-md-12">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label10}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <input matInput class="decisionInput" disabled value="">
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label101}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <input matInput class="decisionInput" disabled value=""><button id="gobtn" >{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label102}}</button>
+        </div>
+      </div>
+      <div class="row1 col-md-12 mt-2 mb-2">
+        <div class="col-md-2 alignitemcenter mb-2 p-0">  
+          <span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label103}}</span>
+        </div>
+        <div class="col-md-5 alignitemcenter mb-3 p-0">  
+          <textarea matInput class="decisionInput remarkTextarea" disabled value=""></textarea>  
+        </div>
+        <div class="col-md-4"></div>  
+      </div>
+
+      <div class="row1 col-md-12 mt-2">
+        <div class="col-md-2 alignitemcenter p-0"><span class="inputlabel">{{this.sharedService.headerdata[0]?.jsonData[17]?.data.label104}}</span></div>
+        <div class="col-md-3 alignitemcenter p-0">
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-7"></div>
+      </div>
+
+    </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[18]?.value}}> Content 3 </mat-tab>
+    <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[19]?.value}}>
+      <div class="mt-2 mb-2 row1">
+        <div class="col-md-2 inputlabel alignitemcenter">{{this.sharedService.headerdata[0]?.jsonData[19]?.data.label1}}</div>
+          <div class="col-md-6 inputlabel">
+            <input readonly class="ExtTextarea" type="text">
+          </div>
+      </div>
+      <div class="mt-2 mb-2 row1">
+        <div class="col-md-2 alignitemcenter inputlabel">{{this.sharedService.headerdata[0]?.jsonData[19]?.data.label2}}</div>
+        <div class="col-md-3 inputlabel">                
+          <mat-form-field>
+            <mat-select name="user_data"  [(ngModel)]="user_data" >
+              <mat-option *ngFor="let data of userList" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      </mat-tab>
+      </mat-tab-group>
+      </div>
+    

@@ -1,0 +1,1718 @@
+<div class="mt-5 noborder">
+<div class="mt-3 col-md-12 row" id="">         
+    <div id ="Appdiv" class="active cursorpointer ? col-md-6 contentcenter active: col-md-6 contentcenter" (click)="toggleTabs('Applicant')">Applicant</div> 
+    <div id ="Loandiv" class="cursorpointer ? col-md-6 contentcenter: col-md-6 contentcenter " (click)="toggleTabs('Loans')">Loan</div>
+  </div>
+  <div class="Apptab   ml-5" id ="Apptab">
+    
+    <mat-tab-group id="perlabel" (selectedTabChange)="this.sharedService.tabChanged($event)">
+      <mat-tab label="Personal Details">    
+        <div class="mt-2 mb-2 "> <span class="apphead">Applicant</span> </div>
+        
+        <div class="row p-0 mb-3 col-md-12">
+            
+            
+           <div class="col-md-4" readonly>                
+            <mat-form-field readonly>
+              <mat-label>Religion</mat-label>
+              <mat-select readonly>
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+           </div>     
+           <div class="col-md-8"></div>
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>PAN</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field>
+              <mat-label>Id Issued date</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field>
+              <mat-label>Expiry Date</mat-label>
+              <input matInput [matDatepicker]="picker1">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+          <mat-form-field>
+            <mat-label>Resident Status</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          
+          <mat-form-field class="matformfield">
+            <mat-label>Business Name</mat-label>
+            <input matInput placeholder="Existing Contact No" value="">
+          </mat-form-field>
+          
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>No of Adult Dependencies</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+        <mat-form-field>
+          <mat-label>Is Guaranter</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>No. of Child Dependents</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>No. of Earning Members</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+   </div>
+
+   <div class="row mb-3 p-0 col-md-12">
+    <!-- <span>Applicant</span> -->
+    <div class="col-md-4">                
+      <mat-form-field>
+        <mat-label>Proprietorship Flag</mat-label>
+        <mat-select [(value)]="UserData">
+            <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                {{ brand.viewValue }}
+              </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>     
+    <div class="col-md-4">
+      <mat-form-field class="matformfield">
+        <mat-label>Existing Contact No</mat-label>
+        <input matInput placeholder="Existing Contact No" value="">
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field class="matformfield">
+        <mat-label>CIF</mat-label>
+        <input matInput placeholder="CIF" value="">
+      </mat-form-field>
+    </div>
+ </div>
+
+ <div class="row mb-3 p-0 col-md-12">
+  <!-- <span>Applicant</span> -->
+  <div class="col-md-4">                
+    <mat-form-field class="matformfield">
+      <mat-label>Existing Customer Role</mat-label>
+      <input matInput placeholder="Existing Customer Role" value="">
+    </mat-form-field>
+  </div>     
+  <div class="col-md-4">
+    <mat-form-field>
+      <mat-label>Gender</mat-label>
+      <mat-select>
+        <mat-option></mat-option>
+        <mat-option [value]="gender[0].male">MALE</mat-option>
+        <mat-option [value]="gender[0].female">FEMALE</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="matformfield">
+      <mat-label>Middle Name</mat-label>
+      <input matInput placeholder="Middle Name" value="">
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+  <mat-form-field class="matformfield">
+    <mat-label>Name as per NSDL</mat-label>
+    <input matInput placeholder="Name as per NSDL" value="">
+  </mat-form-field>
+</div>     
+<div class="col-md-4">
+  <mat-form-field class="matformfield">
+    <mat-label>Existing CKYC No.</mat-label>
+    <input matInput placeholder="Existing CKYC No." value="">
+  </mat-form-field>
+</div>
+<div class="col-md-4">
+  <mat-form-field class="matformfield">
+    <mat-label>Name as per CKYC</mat-label>
+    <input matInput placeholder="Name as per CKYC" value="">
+  </mat-form-field>
+</div>
+</div>
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Father's Name</mat-label>
+  <input matInput placeholder="Father's Name" value="">
+</mat-form-field>
+</div>     
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>Spouse's Name</mat-label>
+  <input matInput placeholder="Spouse's Name" value="">
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>Mother's Name</mat-label>
+  <input matInput placeholder="Mother's Name" value="">
+</mat-form-field>
+</div>
+</div>
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field>
+  <mat-label>Date of Birth</mat-label>
+  <input matInput [matDatepicker]="picker3">
+  <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+  <mat-datepicker #picker3></mat-datepicker>
+</mat-form-field>
+</div>     
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>CIN</mat-label>
+  <input matInput placeholder="CIN" value="">
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>TAN</mat-label>
+  <input matInput placeholder="TAN" value="">
+</mat-form-field>
+</div>
+</div>
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>GST No.</mat-label>
+  <input matInput placeholder="GST No." value="">
+</mat-form-field>
+</div>     
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>DIN(Director Identification No.</mat-label>
+  <input matInput placeholder="Director Identification No." value="">
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>Business Name</mat-label>
+  <input matInput placeholder="Business Name" value="">
+</mat-form-field>
+</div>
+</div>
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Sector</mat-label>
+  <input matInput placeholder="Sector" value="">
+</mat-form-field>
+</div>     
+
+</div>
+<div class="mt-5 mr-3 floatright">
+    <button id="nextbtn" mat-flat-button color="#BF3081">NEXT</button>
+  </div>
+</mat-tab>
+      <mat-tab label="Contact Info">
+        
+        <div class="row p-0 mb-3 col-md-12">
+            
+            
+          <div class="col-md-4">                
+           <mat-form-field class="matformfield">
+             <mat-label>Applicants Name</mat-label>
+             <input matInput placeholder="Applicants Name" value="">
+           </mat-form-field>
+          </div>     
+          <div class="col-md-4">                
+           <mat-form-field class="matformfield">
+             <mat-label>Telephones Bill Provided</mat-label>
+             <input matInput placeholder="Telephones Bill Provided" value="">
+           </mat-form-field>
+         </div>     
+         <div class="col-md-4">
+           <mat-form-field class="matformfield">
+             <mat-label>Fax No.</mat-label>
+             <input matInput placeholder="Existing Contact No" value="">
+           </mat-form-field>
+         </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+          <mat-form-field>
+            <mat-label>Connection Type(Mobile)</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Connection Type(Landline) </mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Preferred Communication</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+     </div>
+
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+        <mat-form-field>
+          <mat-label>Ownership Proof Type</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        
+        <mat-form-field>
+          <mat-label>Negative Area</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Comments Negative Area</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+   </div>
+
+   <div class="row mb-3 p-0 col-md-12">
+    <!-- <span>Applicant</span> -->
+    <div class="col-md-4">
+    <mat-form-field>
+      <mat-label>Out of Geo</mat-label>
+      <mat-select [(value)]="UserData">
+        <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+            {{ brand.viewValue }}
+          </mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>
+    <div class="col-md-4">                
+      <mat-form-field class="matformfield">
+        <mat-label>Comments Out of Geo</mat-label>
+        <input matInput placeholder="Comments Out of Geo" value="">
+      </mat-form-field>
+    </div>     
+    <div class="col-md-4">
+      <mat-form-field class="matformfield">
+        <mat-label>Caution Location</mat-label>
+        <input matInput placeholder="Caution Location" value="">
+      </mat-form-field>
+    </div>
+    
+ </div>
+
+ <div class="row mb-3 p-0 col-md-12">
+  <!-- <span>Applicant</span> -->
+  <div class="col-md-4">                
+    <mat-form-field class="matformfield">
+      <mat-label>Comments Caution Location</mat-label>
+      <input matInput placeholder="Existing Contact No" value="">
+    </mat-form-field>
+  </div>     
+  <div class="col-md-8">
+    
+  </div>
+</div>
+
+<div class="row mb-3 p-0 col-md-12">
+  <!-- <span>Applicant</span> -->
+  <div class="col-md-4">                
+    <mat-form-field class="matformfield">
+      <mat-label>Mobile No.*</mat-label>
+      <input matInput placeholder="Mobile No." value="">
+    </mat-form-field>
+  </div>     
+  <div class="col-md-4">
+    <mat-form-field class="matformfield">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" value="">
+    </mat-form-field>
+  </div>
+  <div class="col-md-4">
+    <mat-form-field class="matformfield">
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="Middle Name" value="">
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+  <mat-form-field>
+    <mat-label>Pincode</mat-label>
+    <mat-select [(value)]="UserData">
+      <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>     
+<div class="col-md-4">
+  <mat-form-field class="matformfield">
+    <mat-label>City</mat-label>
+    <input matInput placeholder="City" value="">
+  </mat-form-field>
+</div>
+<div class="col-md-4">
+  <mat-form-field>
+    <mat-label>Disrict</mat-label>
+    <mat-select [(value)]="UserData">
+      <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+</div>
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field>
+  <mat-label>Tehsil</mat-label>
+  <mat-select [(value)]="UserData">
+    <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>     
+<div class="col-md-4">
+<mat-form-field>
+  <mat-label>State</mat-label>
+  <mat-select [(value)]="UserData">
+    <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+<div class="col-md-4">
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="row mb-3 col-md-12">Reference1</div>
+<div class="row mb-3 p-0 col-md-12">    
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field>
+  <mat-label>Reference1 Name</mat-label>
+  <mat-select [(value)]="UserData">
+    <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>     
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>Reference1 Address</mat-label>
+  <input matInput placeholder="Reference1 Address" value="">
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>Reference1 Phone No </mat-label>
+  <input matInput placeholder="Reference1 Phone No" value="">
+</mat-form-field>
+</div>
+</div>
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field>
+  <mat-label>Relation Type</mat-label>
+  <mat-select [(value)]="UserData">
+    <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>     
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>Address Copy From</mat-label>
+  <input matInput placeholder="Address Copy From" value="">
+</mat-form-field>
+</div>
+<div class="col-md-4">
+<mat-form-field class="matformfield">
+  <mat-label>Address Type to Copy</mat-label>
+  <input matInput placeholder="Address Type to Copy" value="">
+</mat-form-field>
+</div>
+</div>
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Same as</mat-label>
+  <input matInput placeholder="Sector" value="">
+</mat-form-field>
+</div> 
+
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>C/O</mat-label>
+  <input matInput placeholder="C/O" value="">
+</mat-form-field>
+</div>   
+
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Road Name</mat-label>
+  <input matInput placeholder="C/O" value="">
+</mat-form-field>
+</div>   
+
+</div>
+
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Landmark</mat-label>
+  <input matInput placeholder="Landmark" value="">
+</mat-form-field>
+</div> 
+
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Landline No.</mat-label>
+  <input matInput placeholder="Landline No." value="">
+</mat-form-field>
+</div>   
+
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Alternate Mobile No.</mat-label>
+  <input matInput placeholder="Alternate Mobile No." value="">
+</mat-form-field>
+</div>   
+
+</div>
+
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Email Address</mat-label>
+  <input matInput placeholder="Email Address" value="">
+</mat-form-field>
+</div> 
+
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Contact Persons Name</mat-label>
+  <input matInput placeholder="Contact Persons Name" value="">
+</mat-form-field>
+</div>   
+
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Contact Person's Phone No.</mat-label>
+  <input matInput placeholder="Contact Person's Phone No." value="">
+</mat-form-field>
+</div>   
+
+</div>
+
+
+
+
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Alternate Mobile NO.</mat-label>
+  <input matInput placeholder="Alternate Mobile NO" value="">
+</mat-form-field>
+</div> 
+
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Fax No.</mat-label>
+  <input matInput placeholder="Fax No." value="">
+</mat-form-field>
+</div>   
+
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Mobile No.</mat-label>
+  <input matInput placeholder="Mobile No." value="">
+</mat-form-field>
+</div>   
+
+</div>
+
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+<mat-form-field class="matformfield">
+  <mat-label>Email</mat-label>
+  <input matInput placeholder="Email" value="">
+</mat-form-field>
+</div> 
+
+<div class="col-md-8">                
+
+</div>   
+
+</div>
+
+      </mat-tab>
+      <mat-tab label="Income Details">
+        <div class="mt-3 mb-3"> <span class="">Applicant</span> </div>
+        
+        <div class="row p-0 mb-3 col-md-12">
+            
+            
+           <div class="col-md-4">                
+              <mat-form-field class="matformfield">
+                <mat-label>Name of Previous Organization</mat-label>
+                <input matInput placeholder="Name of Previous Organization" value="">
+              </mat-form-field>
+           </div>     
+           <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>No. of Years at Previous Job</mat-label>
+              <input matInput placeholder="No. of Years at Previous Job" value="">
+            </mat-form-field>
+           </div>
+
+           <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>HR Confirmation </mat-label>
+              <input matInput placeholder="HR Confirmation" value="">
+            </mat-form-field>
+           </div>
+
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>Date of Retirement/Termination of Work Contract</mat-label>
+              <input matInput [matDatepicker]="picker7">
+              <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+              <mat-datepicker #picker7></mat-datepicker>
+            </mat-form-field>
+        
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Post office</mat-label>
+              <input matInput placeholder="Post office" value="">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>STD Code</mat-label>
+              <input matInput placeholder="STD Code" value="">
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+           <mat-form-field class="matformfield">
+             <mat-label>Email Address</mat-label>
+             <input matInput placeholder="Ex. Pizza" value="">
+           </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+         <mat-form-field class="matformfield">
+           <mat-label>Favorite food</mat-label>
+           <input matInput placeholder="Ex. Pizza" value="">
+         </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+   </div>
+      </mat-tab>      
+        
+      <mat-tab label="Bank Details">  
+        <div class="row p-0 mb-3 col-md-12">
+           <div class="col-md-4">                
+            <mat-form-field class="matformfield">
+              <mat-label>IFSC Code</mat-label>
+              <input matInput placeholder="IFSC Code" value="">
+            </mat-form-field>
+         </div>     
+         <div class="col-md-4">
+           <mat-form-field class="matformfield">
+             <mat-label>Name of The Bank</mat-label>
+             <input matInput placeholder="Name of The Bank" value="">
+           </mat-form-field>
+         </div>
+         <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Branch Name & Address</mat-label>
+            <input matInput placeholder="Branch Name & Address" value="">
+          </mat-form-field>                
+        </div>
+        </div>
+        
+        <div class="row p-0 mb-3 col-md-12">
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>MICR Code</mat-label>
+              <input matInput placeholder="MICR Code" value="">
+            </mat-form-field>                
+          </div>
+          <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>Name of the Account Holder</mat-label>
+              <mat-select name="user_data"  [(ngModel)]="UserData" >
+                <mat-option *ngFor="let data of UserData" [value]="data.value" >{{ data.value }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Account Type</mat-label>
+            <mat-select name="user_data"  [(ngModel)]="UserData" >
+              <mat-option *ngFor="let data of UserData" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+       </div>
+
+       <div class="row p-0 mb-3 col-md-12">
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Branch Name & Address</mat-label>
+            <input matInput placeholder="Branch Name & Address" value="">
+          </mat-form-field>                
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Account Number</mat-label>
+            <input matInput placeholder="Account Number" value="">
+          </mat-form-field>                
+        </div>
+        <div class="col-md-4">                
+          <mat-form-field>
+            <mat-label>Account Opened Since</mat-label>
+            <mat-select name="user_data"  [(ngModel)]="UserData" >
+              <mat-option *ngFor="let data of UserData" [value]="data.value" >{{ data.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>     
+     </div>
+     <div class="row p-0 mb-3 col-md-12">
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Name as per Bank Statement</mat-label>
+          <input matInput placeholder="Name as per Bank Statement" value="">
+        </mat-form-field>                
+      </div>
+      <div class="col-md-8"></div>
+     </div>
+     
+     <h5>Bank Statement Analysis</h5>
+
+     <div class="row p-0 mb-3 col-md-12">
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>EMI Date</mat-label>
+          <input matInput [matDatepicker]="picker8">
+          <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+          <mat-datepicker #picker8></mat-datepicker>
+        </mat-form-field>
+      </div> 
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>No. Of Cheque Issued</mat-label>
+          <input matInput placeholder="No. Of Cheque Issued" value="">
+        </mat-form-field>
+      </div> 
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Salary Credits Date</mat-label>
+          <input matInput [matDatepicker]="picker9">
+          <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+          <mat-datepicker #picker9></mat-datepicker>
+        </mat-form-field>
+      </div> 
+     </div>
+
+
+     <div class="row p-0 mb-3 col-md-12">
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Total Credits</mat-label>
+          <input matInput placeholder="Total Credits" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Total Debits</mat-label>
+          <input matInput placeholder="Total Debits" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Average Balance On Last Day</mat-label>
+          <input matInput placeholder="Average Balance On Last Day" value="">
+        </mat-form-field>                
+      </div>
+     </div>
+
+     <div class="row p-0 mb-3 col-md-12">
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Average No of Check Bounced</mat-label>
+          <input matInput placeholder="Average No of Check Bounced" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Average Cheque Bounced Amount</mat-label>
+          <input matInput placeholder="Average Cheque Bounced Amount" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>EMI of Running Loan</mat-label>
+          <input matInput placeholder="EMI of Running Loan" value="">
+        </mat-form-field>                
+      </div>
+     </div>
+
+     <div class="row p-0 mb-3 col-md-12">
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Total EMI</mat-label>
+          <input matInput placeholder="Average No of Check Bounced" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Bank Statement From</mat-label>
+          <input matInput [matDatepicker]="picker10">
+          <mat-datepicker-toggle matSuffix [for]="picker10"></mat-datepicker-toggle>
+          <mat-datepicker #picker10></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Bank Statement To</mat-label>
+          <input matInput [matDatepicker]="picker11">
+          <mat-datepicker-toggle matSuffix [for]="picker11"></mat-datepicker-toggle>
+          <mat-datepicker #picker11></mat-datepicker>
+        </mat-form-field>
+      </div>
+     </div>
+     <div class="row p-0 mb-3 col-md-12">
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Remarks</mat-label>
+            <input matInput placeholder="Remarks" value="">
+          </mat-form-field>                
+        </div>
+        <div class="col-md-8"></div>
+      </div>
+  </mat-tab>
+
+  <mat-tab label="Repayment Track Record">  
+        <div class="mt-3 mb-3"> <span class="">Applicant</span> </div>
+        
+        <div class="row p-0 mb-3 col-md-12">                
+            
+           <div class="col-md-4">                
+              <mat-form-field class="matformfield">
+                <mat-label>Releigion</mat-label>
+                <input matInput placeholder="Lorem" value="">
+              </mat-form-field>
+           </div>     
+           <div class="col-md-8"></div>
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+             <mat-form-field class="matformfield">
+               <mat-label>Favorite food</mat-label>
+               <input matInput placeholder="Ex. Pizza" value="">
+             </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+           <mat-form-field class="matformfield">
+             <mat-label>Favorite food</mat-label>
+             <input matInput placeholder="Ex. Pizza" value="">
+           </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+         <mat-form-field class="matformfield">
+           <mat-label>Favorite food</mat-label>
+           <input matInput placeholder="Ex. Pizza" value="">
+         </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+   </div>
+      </mat-tab>
+
+
+    </mat-tab-group>
+  </div>
+  <div class="Loantab ml-5" style="display: none;" id="Loantab">
+    <mat-tab-group id="perlabel" (selectedTabChange)="this.sharedService.tabChanged($event)">
+      <mat-tab label="Financial Details"> 
+                    
+        <div class="row p-0 mb-3 col-md-12">
+            
+            
+           <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>Include Financial</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+           </div>     
+           <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>Include Income</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                    {{ brand.viewValue }}
+                  </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Net Salary for month 1</mat-label>
+              <input matInput placeholder="Net Salary for month 1" value="">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>Loan Obligations per Month</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field>
+              <mat-label>Net Income monthly</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Gross Yearly salary</mat-label>
+              <input matInput placeholder="Gross Yearly salary" value="">
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+          <mat-form-field>
+            <mat-label>Variable Income</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>NRI Income</mat-label>
+            <input matInput placeholder="NRI Income" value="">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Other Income Frequency</mat-label>
+            <input matInput placeholder="Other Income Frequency" value="">
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+        <mat-form-field>
+          <mat-label>Rental Income Frequency</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Rental Income</mat-label>
+          <input matInput placeholder="Rental Income" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Date of Filing ITR</mat-label>
+          <input matInput [matDatepicker]="picker4">
+          <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+          <mat-datepicker #picker4></mat-datepicker>
+        </mat-form-field>
+      </div>
+   </div>
+
+    
+      </mat-tab>
+      <mat-tab label="Property Details">
+        <div class="mt-3 mb-3"> <span class="">Applicant</span> </div>
+        
+        <div class="row p-0 mb-3 col-md-12">
+            
+            
+           <div class="col-md-4">                
+              <mat-form-field class="matformfield">
+                <mat-label>Description of Collateral</mat-label>
+                <input matInput placeholder="Lorem" value="">
+              </mat-form-field>
+           </div>     
+           <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>Collateral Sub Type</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+         </div>     
+         <div class="col-md-4">
+           <mat-form-field class="matformfield">
+             <mat-label>Builder Decription*</mat-label>
+             <input matInput placeholder="Ex. Pizza" value="">
+           </mat-form-field>
+         </div>
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+             <mat-form-field class="matformfield">
+               <mat-label>Builder Name</mat-label>
+               <input matInput placeholder="Builder Name" value="">
+             </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Property Location</mat-label>
+              <input matInput placeholder="Property Location" value="">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Project Name</mat-label>
+              <input matInput placeholder="Project Name" value="">
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+           <mat-form-field class="matformfield">
+             <mat-label>APF No.</mat-label>
+             <input matInput placeholder="APF No." value="">
+           </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Cross Collateral</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Cross Contract No. 1</mat-label>
+            <input matInput placeholder="Cross Contract No. 1" value="">
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+         <mat-form-field class="matformfield">
+           <mat-label>Property Usage</mat-label>
+           <input matInput placeholder="Ex. Pizza" value="">
+         </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Ownership Type*</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Property Type</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+      
+   </div>
+
+   <div class="row p-0 mb-3 col-md-12">
+            
+            
+    <div class="col-md-4">                
+     <mat-form-field>
+       <mat-label>Construction Type</mat-label>
+       <mat-select [(value)]="UserData">
+        <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+            {{ brand.viewValue }}
+          </mat-option>
+       </mat-select>
+     </mat-form-field>
+    </div>     
+    <div class="col-md-4">
+     <mat-form-field>
+       <mat-label>Co-Operative charges*</mat-label>
+       <mat-select [(value)]="UserData">
+        <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+            {{ brand.viewValue }}
+          </mat-option>
+       </mat-select>
+     </mat-form-field>
+    </div>
+ </div>
+
+ <div class="row mb-3 p-0 col-md-12">
+   <!-- <span>Applicant</span> -->
+   <div class="col-md-4">                
+     <mat-form-field>
+       <mat-label>Nature of Property</mat-label>
+       <mat-select [(value)]="UserData">
+        <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+            {{ brand.viewValue }}
+          </mat-option>
+       </mat-select>
+     </mat-form-field>
+   </div>     
+   <div class="col-md-4">
+     <mat-form-field class="matformfield">
+       <mat-label>Prperty Address</mat-label>
+       <input matInput placeholder="Prperty Address" value="">
+     </mat-form-field>
+   </div>
+   <div class="col-md-4">
+     <mat-form-field class="matformfield">
+       <mat-label>Prperty Post Code</mat-label>
+       <input matInput placeholder="Prperty Post Code" value="">
+     </mat-form-field>
+   </div>
+</div>
+
+<div class="row mb-3 p-0 col-md-12">
+ <!-- <span>Applicant</span> -->
+ <div class="col-md-4">                
+   <mat-form-field>
+     <mat-label>City</mat-label>
+     <mat-select [(value)]="UserData">
+       <mat-option></mat-option>
+       <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+        {{ brand.viewValue }}
+      </mat-option>
+     </mat-select>
+   </mat-form-field>
+ </div>     
+ <div class="col-md-4">
+   <mat-form-field>
+     <mat-label>District*</mat-label>
+     <mat-select [(value)]="UserData">
+       <mat-option></mat-option>
+       <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+        {{ brand.viewValue }}
+      </mat-option>
+     </mat-select>
+   </mat-form-field>
+ </div>
+ <div class="col-md-4">
+   <mat-form-field>
+     <mat-label>State</mat-label>
+     <mat-select [(value)]="UserData">
+       <mat-option></mat-option>
+       <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+     </mat-select>
+   </mat-form-field>
+ </div>
+</div>
+<div class="row mb-3 p-0 col-md-12">
+<!-- <span>Applicant</span> -->
+<div class="col-md-4">                
+ <mat-form-field>
+   <mat-label>Country</mat-label>
+   <mat-select [(value)]="UserData">
+     <mat-option></mat-option>
+     <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+   </mat-select>
+ </mat-form-field>
+</div>     
+<div class="col-md-8">
+ 
+</div>
+</div>
+
+
+      </mat-tab>
+      <mat-tab label="Loan Details">
+        <div class="mt-3 mb-3"> <span class="">Applicant</span> </div>
+        
+        <div class="row p-0 mb-3 col-md-12">
+            
+            
+           <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>Construction Type</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+           </div>     
+           <div class="col-md-4">
+            <mat-form-field>
+              <mat-label>Co-Operative charges*</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+           </div>
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+            <mat-form-field>
+              <mat-label>Nature of Property</mat-label>
+              <mat-select [(value)]="UserData">
+                <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Prperty Address</mat-label>
+              <input matInput placeholder="Prperty Address" value="">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Prperty Post Code</mat-label>
+              <input matInput placeholder="Prperty Post Code" value="">
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+          <mat-form-field>
+            <mat-label>City</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>District*</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>State</mat-label>
+            <mat-select [(value)]="UserData">
+               <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+        <mat-form-field>
+          <mat-label>Country</mat-label>
+          <mat-select [(value)]="UserData">
+             <mat-option *ngFor="let brand of UserData" [value]="brand.value">
+                  {{ brand.viewValue }}
+                </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>     
+      <div class="col-md-8">
+        
+      </div>
+   </div>
+      </mat-tab>      
+        
+      <mat-tab label="Repayment Details">  
+        <div class="mt-3 mb-3"> <span class="">Applicant</span> </div>
+        
+        <div class="row p-0 mb-3 col-md-12">
+            
+            
+           <div class="col-md-4">                
+              <mat-form-field class="matformfield">
+                <mat-label>Releigion</mat-label>
+                <input matInput placeholder="Lorem" value="">
+              </mat-form-field>
+           </div>     
+           <div class="col-md-8"></div>
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+             <mat-form-field class="matformfield">
+               <mat-label>Favorite food</mat-label>
+               <input matInput placeholder="Ex. Pizza" value="">
+             </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+           <mat-form-field class="matformfield">
+             <mat-label>Favorite food</mat-label>
+             <input matInput placeholder="Ex. Pizza" value="">
+           </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+         <mat-form-field class="matformfield">
+           <mat-label>Favorite food</mat-label>
+           <input matInput placeholder="Ex. Pizza" value="">
+         </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+   </div>
+      </mat-tab>
+
+      <mat-tab label="Insuarance">  
+        <div class="mt-3 mb-3"> <span class="">Applicant</span> </div>
+        
+        <div class="row p-0 mb-3 col-md-12">                
+            
+           <div class="col-md-4">                
+              <mat-form-field class="matformfield">
+                <mat-label>Releigion</mat-label>
+                <input matInput placeholder="Lorem" value="">
+              </mat-form-field>
+           </div>     
+           <div class="col-md-8"></div>
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+             <mat-form-field class="matformfield">
+               <mat-label>Favorite food</mat-label>
+               <input matInput placeholder="Ex. Pizza" value="">
+             </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+           <mat-form-field class="matformfield">
+             <mat-label>Favorite food</mat-label>
+             <input matInput placeholder="Ex. Pizza" value="">
+           </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+         <mat-form-field class="matformfield">
+           <mat-label>Favorite food</mat-label>
+           <input matInput placeholder="Ex. Pizza" value="">
+         </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+   </div>
+      </mat-tab>
+
+      <mat-tab label="Disbursment Details">  
+        <div class="mt-3 mb-3"> <span class="">Applicant</span> </div>
+        
+        <div class="row p-0 mb-3 col-md-12">                
+            
+           <div class="col-md-4">                
+              <mat-form-field class="matformfield">
+                <mat-label>Releigion</mat-label>
+                <input matInput placeholder="Lorem" value="">
+              </mat-form-field>
+           </div>     
+           <div class="col-md-8"></div>
+        </div>
+
+        <div class="row mb-3 p-0 col-md-12">
+          <!-- <span>Applicant</span> -->
+          <div class="col-md-4">                
+             <mat-form-field class="matformfield">
+               <mat-label>Favorite food</mat-label>
+               <input matInput placeholder="Ex. Pizza" value="">
+             </mat-form-field>
+          </div>     
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field class="matformfield">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="">
+            </mat-form-field>
+          </div>
+       </div>
+
+       <div class="row mb-3 p-0 col-md-12">
+        <!-- <span>Applicant</span> -->
+        <div class="col-md-4">                
+           <mat-form-field class="matformfield">
+             <mat-label>Favorite food</mat-label>
+             <input matInput placeholder="Ex. Pizza" value="">
+           </mat-form-field>
+        </div>     
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="matformfield">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+          </mat-form-field>
+        </div>
+     </div>
+     <div class="row mb-3 p-0 col-md-12">
+      <!-- <span>Applicant</span> -->
+      <div class="col-md-4">                
+         <mat-form-field class="matformfield">
+           <mat-label>Favorite food</mat-label>
+           <input matInput placeholder="Ex. Pizza" value="">
+         </mat-form-field>
+      </div>     
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="matformfield">
+          <mat-label>Favorite food</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field>
+      </div>
+   </div>
+      </mat-tab>
+
+
+    </mat-tab-group>
+  </div>
+</div>

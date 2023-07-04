@@ -1,0 +1,133 @@
+<div class="mt-3 ml-3 mr-3 ParentDiv zeropad">
+    <mat-tab-group (selectedTabChange)="this.sharedService.tabChanged($event)" id="matgrp4">
+      <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[2]?.data.label11}}>
+      </mat-tab>
+      <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[2]?.data.label12}}>
+        <div class="noborderradius"></div>
+      </mat-tab>
+      <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[2]?.data.label13}}>
+        <div class=" noborderradius"></div>
+      </mat-tab>  
+      <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[2]?.data.label14}}>
+        <div class=" noborderradius"></div>
+      </mat-tab>
+      <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[2]?.data.label15}}>
+        <div class=" noborderradius ParentDiv mt20 zeropad m-0 noborder">
+            <div class="row1 mt-2 col-md-12">
+                <div class="col-md-2 inputlabel">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label151}}</div>
+                <div class="col-md-3 mb-1 p-0"><input readonly class="maininputs" type="text"></div>
+                <div class="col-md-2 mt-3"></div>
+                <div class="col-md-2 inputlabel">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label152}}</div>
+                <div class="col-md-3 p-0"><input readonly class="maininputs" type="text"></div>
+            </div>
+            <div class="row1 col-md-12">
+              <div class="col-md-2 inputlabel">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label153}}</div>
+              <div class="col-md-3 mb-1 p-0"><input readonly class="maininputs" type="text"></div>
+              <div class="col-md-2 mt-3"></div>
+              <div class="col-md-2 inputlabel">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label154}}</div>
+              <div class="col-md-3 p-0"><input readonly class="maininputs" type="text"></div>
+            </div>
+            <div class="row1 col-md-12">
+              <div class="col-md-2 inputlabel">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label155}}</div>
+              <div class="col-md-3 mb-1 p-0"><input readonly class="maininputs" type="text"></div>
+              <div class="col-md-2 mt-3"></div>
+              <div class="col-md-2 inputlabel">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label156}}</div>
+              <div class="col-md-3 p-0"><input readonly class="maininputs" type="text"></div>
+            </div>
+            <div class="row1 col-md-12">
+              <div class="col-md-2 inputlabel">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label157}}</div>
+              <div class="col-md-6 mb-1 p-0"><input readonly class="DecisionDescription" type="text"></div>
+              <div class="col-md-4 mt-3 justifycenter">
+                <button id="Decisionnotebtn" mat-flat-button color="#BF3081">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label158}}</button>
+              </div>
+            </div>
+            <div class="row1 col-md-12">
+              <div class="col-md-2 inputlabel">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label159}}</div>
+              <div class="col-md-6 mb-1 p-0"><input readonly class="DecisionDeclineDes" type="text"></div>
+              <div class="col-md-4 mt-3"></div>
+            </div>
+
+            <div class="mt-5 floatright">
+              <button id="cancelbtn" mat-flat-button color="#BF3081">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label1511}}</button>
+              <button id="savebtn" mat-flat-button color="#BF3081">{{this.sharedService.headerdata[0]?.jsonData[2]?.data.decisionData.label1512}}</button>
+            </div>
+        </div>
+    </mat-tab>
+      <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[2]?.data.label16}}>
+        <div class="noborderradius"></div>
+      </mat-tab>
+      <mat-tab label={{this.sharedService.headerdata[0]?.jsonData[2]?.data.label17}}>
+        <div class="noborderradius"></div>
+      </mat-tab>
+
+    </mat-tab-group>
+    
+  </div>
+  
+    <div *ngIf="this.sharedService.adjusctionflag">
+      <div *ngFor="let data1 of serviceData" class="noborderradius mr-3 ml-3">
+        <mat-accordion>
+          <mat-expansion-panel class="matexpansionpanel mt-3" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header class="ParentDiv matexpansionheader col-md-12 m-0 backclr">
+            <div class="col-md-4">{{data1.data.completness}}</div>
+            <div class="col-md-4">{{data1.data.passfailstatus}}</div>
+            <div class="col-md-4"></div>
+          </mat-expansion-panel-header>
+        <div>
+          <div class="row mt-3 col-md-12 flexunwrap">
+            <div class="col-md-2">
+              <mat-checkbox class="inputlabel fntwt13">Check All</mat-checkbox>
+            </div>
+            <div class="col-md-4">
+              <p class="inputlabel fntwt13"><b>View Rule</b></p>
+            </div>
+            <div class="col-md-2">
+              <p class="inputlabel fntwt13"><b>Role Name</b></p>
+            </div>
+            <div class="col-md-2">
+              <p class="inputlabel fntwt13"><b>Pass/Fail</b></p>
+            </div>
+            <div class="col-md-2">
+              <p class="inputlabel fntwt13"><b>Override</b></p>
+            </div>
+          </div>
+          <div class="row mt-3 border-bottom col-md-12">
+            <div class="col-md-2">
+              <mat-checkbox class="inputlabel fntwt13"></mat-checkbox>
+            </div>
+            <div class="col-md-4">
+              <p class="fnt12 inputlabel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia incidunt enim reprehenderit quas dolorum</p>
+            </div>
+            <div class="col-md-2">
+              <p class="fnt12 inputlabel">Lorem</p>
+            </div>
+            <div class="col-md-2">
+              <p class="fnt12 inputlabel">Pass</p>
+            </div>
+            <div class="col-md-2">
+              <p class="fnt12 inputlabel">Lorem</p>
+            </div>
+          </div>
+          <div class="row mt-3 col-md-12">
+            <div class="col-md-2">
+              <mat-checkbox class="inputlabel fntwt13"></mat-checkbox>
+            </div>
+            <div class="col-md-4">
+              <p class="fnt12 inputlabel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia incidunt enim reprehenderit quas dolorum</p>
+            </div>
+            <div class="col-md-2">
+              <p class="fnt12 inputlabel">Lorem</p>
+            </div>
+            <div class="col-md-2">
+              <p class="fnt12 inputlabel">Pass</p>
+            </div>
+            <div class="col-md-2">
+              <p class="fnt12 inputlabel">Lorem</p>
+            </div>
+          </div>
+        </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      </div>
+    </div>

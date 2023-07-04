@@ -1,0 +1,377 @@
+.crd{
+   text-align: center;
+   font-family: sans-serif;
+}
+.card-body{
+    padding: 14px;
+}
+/* .mat-tab-label-active{
+background-color:purple ;
+opacity: 1 !important;
+} */
+.more{
+    font-size: 13px;
+    color: #C71585;
+    padding-left: 77%;
+    font-weight: 500;
+    cursor: pointer;
+}
+.addSalary{
+    font-size: 13px;
+    color: #C71585;
+    padding-left: 77%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.more1{
+    font-size: 13px;
+    color: #C71585;
+    padding-left: 2%;
+    font-weight: 500;
+    cursor: pointer;
+}
+.add{
+    padding-left: 66%;
+    font-size: 13px;
+    color: #C71585;
+    font-weight: 500;
+}
+
+.btn{
+    width: 61%;
+    height: 35px;
+    border: none;
+    background-color: #C71585;
+    color: white;
+   
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #8a2be2;
+    visibility: visible;
+    left: 0px;
+    width: 199px;
+}
+
+.required:after {
+    content:"*";
+    color: red;
+  }
+
+  .btn1{
+    margin-right:4%;
+    width: 37%;
+    border-radius: 4px;
+    color: gray;
+    border-color: #C71585;
+    background-color: white;
+    height: 33px;
+  }
+  .manageserviceactivecss {
+    left: 244px;
+    /* width: 370px; */
+    height: 42px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #C71585 0% 0% no-repeat padding-box;
+    /* border-radius: 17px 17px 0px 0px; */
+    opacity: 1;
+    /* margin-left: 0%; */
+    color: white;
+}
+.manageuserTextactivecss {
+    color: white;
+}
+
+::ng-deep .mat-tab-label-active #manageuserstyle {
+    background-color: #C71585 0% 0% no-repeat padding-box;
+    border-radius: 17px 17px 0px 0px;
+    opacity: 1 !important;
+    max-width: 30%;
+    left: 11%;
+}
+.required-field::after {
+    content: "*";
+    color: red;
+}
+.manageuseractivecss {
+    left: 244px;
+    /* width: 370px; */
+    height: 42px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #C71585 0% 0% no-repeat padding-box;
+    /* border-radius: 17px 17px 0px 0px; */
+    opacity: 1;
+    /* margin-left: 25%; */
+}
+.subhead{
+    font-size: 12px;
+    padding-left: 55px;
+}
+.abc{
+    padding-left: 57px;
+    }
+ .nxt{
+      padding-left: 85%;
+      padding-top: 2%;
+    }
+    .save{
+    padding-left: 85%;
+    padding-top: 2%;
+    }
+    .back{
+      padding-left: 78%;
+      padding-top: 2%;
+      margin-bottom: 1%;
+    }
+    .ref{
+    padding-left: 88%;
+    }
+    .next{
+        padding-left: 78%;
+        padding-top: 2%;
+        margin-bottom: 1%;
+    }
+@media(max-width:1024px){
+.subhead{
+    padding-left:0px;
+}
+}
+@media(max-width:713px){
+    .abc{
+        padding-left: 1px;
+        width: 90%;
+    }
+    .more{
+        padding-left: 25%;
+    }
+    .nxt{
+        
+        padding-left: 61%;
+        padding-top: 2%;
+    }
+    .save{
+        padding-left: 63%;
+    }
+    .back{
+        padding-left: 29%;
+    }
+    .ref{
+        padding-left: 58%;
+    }
+    .next{
+        padding-left: 33%;
+    }
+}
+@media(min-width:768px) and (max-width:1024px){
+    .abc{
+    padding-left: 22px;
+        width: 90%;
+    }
+    .more{
+        padding-left: 68%;
+
+    }
+    .save{
+        padding-left: 78%;
+    }
+    .nxt{
+        padding-left: 80%;
+    }
+    .back{
+        padding-left: 68%;
+    }
+    }
+    .backLoan{
+        padding-left: 4%;
+        padding-top: 32%;
+        margin-bottom: 1%;
+    }
+    .backDisbursement{
+        padding-left: 4%;
+        padding-top: 32%;
+        margin-bottom: 1%;
+    }
+    .backRepayment{
+        padding-left: 4%;
+        padding-top: 32%;
+        margin-bottom: 1%;
+    }
+    .backInsurance{
+        padding-left: 4%;
+        padding-top: 32%;
+        margin-bottom: 1%;
+    }
+    .backProperty{
+        padding-left: 4%;
+        padding-top: 32%;
+        margin-bottom: 1%;
+    }
+    .backFinancial{
+        padding-left: 4%;
+        padding-top: 40%;
+        margin-bottom: 1%;
+    }
+    #corporateRow{
+        padding-top: 12px;
+        background-color: #C71585;
+        text-align: center;
+        width: 92%;
+        color: white;
+    }
+    #idDetRow{
+        padding-top: 12px;
+        background-color: #C71585;
+        text-align: center;
+        width: 92%;
+        color: white;
+    }
+    #bankStmtRow{
+        padding-top: 12px;
+        background-color: #C71585;
+        text-align: center;
+        width: 92%;
+        color: white;
+    }
+    .addId{
+        padding-left: 44%;
+        font-size: 13px;
+        color: #C71585;
+        font-weight: 500;
+    }
+    .addAppGuar{
+        padding-top: 3%;
+    }
+
+    ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+       width: 25%;
+      }
+
+      ::ng-deep .mat-accordion{
+          width: 100%;
+      }
+
+      
+      ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-content .mat-expansion-panel-body{
+        display: flex;
+        flex-direction: row;
+      }       
+
+      @media (max-width: 780px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-content .mat-expansion-panel-body{
+            flex-direction: column;
+          } 
+
+      }
+
+      @media (max-width: 360px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 100%;
+          } 
+      }
+
+
+      @media (min-width: 360px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 100%;
+          } 
+      }
+
+      
+      @media (min-width: 380px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 95%;
+          } 
+      }
+
+      @media (min-width: 400px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 90%;
+          } 
+      }
+
+      @media (min-width: 420px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 85%;
+          } 
+      }
+
+      @media (min-width: 450px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 80%;
+          } 
+      }
+
+      
+      @media (min-width: 480px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 75%;
+          } 
+      }
+
+      
+      @media (min-width: 500px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 70%;
+          } 
+      }
+
+      
+      @media (min-width: 530px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 65%;
+          } 
+      }
+
+      
+      @media (min-width: 580px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 60%;
+          } 
+      }
+
+      
+      @media (min-width: 620px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 55%;
+          } 
+      }
+
+      
+      @media (min-width: 680px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 50%;
+          } 
+      }
+
+      
+      @media (min-width: 725px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 45%;
+          } 
+      }
+
+      
+      @media (min-width: 992px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 40%;
+          } 
+      }
+
+      
+      @media (min-width: 1200px) {
+        ::ng-deep .mat-accordion .mat-expansion-panel .mat-expansion-panel-header{
+            width: 30%;
+          } 
+      }
+
+      @media (max-width: 500px) {
+        ::ng-deep .respdiv .mat-form-field{
+            width: 100% !important;
+          } 
+      }
+
+      .mat-expansion-panel:not([class*=mat-elevation-z]) {
+        box-shadow: 0 0px 0px 0px rgb(0 0 0 / 18%), 0 0px 0px 0 rgb(0 0 0 / 14%), 0 0px 0px 0 rgb(0 0 0 / 12%) !important;
+    }

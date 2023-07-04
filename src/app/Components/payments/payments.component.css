@@ -1,0 +1,120 @@
+table {
+    width: 90%;
+    margin: 20px 21px 10px;
+    table-layout: fixed;
+   }
+
+   .filtercompo{
+       float: left;
+       position: fixed;
+       width:25%;
+       height: 100%;
+       padding-left: 0;
+       background: beige;
+       border-style: ridge;
+       top:56px;
+   }
+
+   .parentdiv{
+       width: 100%;
+       top:56px;
+       position: relative;
+
+   }
+
+   .inputlabel{
+    font-size: 12px;
+    position: relative;
+}
+
+.ExternalVerificationDiv:hover{
+    cursor: pointer;
+}
+
+   th, td {
+    overflow: hidden;
+    width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+  
+  th{
+    text-align: center !important;
+  }
+
+  img{
+      width: 130px;
+      height: 130px;
+  }
+
+  .header{
+      position: fixed;
+      z-index: 10;
+      width: 100%; 
+  }
+
+  #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions .mat-paginator-navigation-previous .mat-button-wrapper:after {
+    content: 'Previous';
+  }
+
+  #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions .mat-paginator-navigation-next .mat-button-wrapper:after {
+    content: 'Next';
+  }
+
+  #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container{
+      justify-content: space-between;
+      flex-wrap:wrap !important;
+  }
+
+  #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions .mat-icon-button
+  {
+      margin: 30px !important;
+  }
+
+  #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions .mat-icon-button .mat-button-wrapper .mat-paginator-icon {
+    display: none;
+  }
+
+  #matPaginatorExtver{
+      margin-left: 65px;;
+  }
+
+  @media (max-width: 340px) 
+  {
+    #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions
+    {
+        flex-direction: column;
+    }
+
+    #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions .mat-icon-button
+    {
+        margin: 0px !important;
+    }
+
+  }
+
+  @media (min-width: 340px) {
+    #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions .mat-paginator-range-label{
+        margin: 0px 15px 0 24px;
+    }
+
+    #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions .mat-icon-button
+    {
+        margin: 10px !important;
+    }
+
+    }
+
+  @media (max-width: 340px) {
+    #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container .mat-paginator-range-actions .mat-paginator-range-label{
+        margin: 0px;
+    }   
+
+  }
+
+  @media (max-width: 600px) {
+    #matPaginatorExtver ::ng-deep .mat-paginator-outer-container .mat-paginator-container{
+        justify-content: center;
+    }   
+  }
